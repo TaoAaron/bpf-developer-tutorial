@@ -100,6 +100,11 @@ $ ecc hello.bpf.c
 Compiling bpf object...
 Packing ebpf object and config into package.json...
 ```
+编译报错：/tmp/fsio_6NPfV6ROg4.sh: 2: llvm-strip: not found
+解决：
+```shell
+cd /usr/bin && ln -s llvm-strip-14 llvm-strip
+```
 
 或使用 docker 镜像进行编译：
 
